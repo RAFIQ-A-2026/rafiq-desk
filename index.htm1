@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>میزکار رفیق | سایت‌های کاربردی ایران</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101827;color:#f4f7ff;font-family:Tahoma,Arial,sans-serif}
+header{padding:30px 18px;text-align:center;background:linear-gradient(135deg,#172b4d,#174c83)}
+header h1{margin:0 0 10px;font-size:30px}
+header p{margin:0;color:#d1e3ff}
+main{max-width:1150px;margin:auto;padding:22px}
+.search{width:100%;padding:16px;border:1px solid #3b506c;border-radius:14px;background:#202e43;color:white;font-size:16px;outline:none}
+.search:focus{border-color:#55a5ff}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}
+.filters button{border:0;border-radius:20px;padding:10px 16px;background:#263951;color:white;cursor:pointer}
+.filters button.active,.filters button:hover{background:#1677e8}
+h2{font-size:20px;margin:25px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px}
+.site{display:block;text-decoration:none;color:white;background:#1c2b40;border:1px solid #30445e;border-radius:14px;padding:17px;transition:.2s}
+.site:hover{background:#263d5b;transform:translateY(-2px);border-color:#3995ff}
+.site strong{display:block;font-size:16px;margin-bottom:8px}
+.site small{color:#b7c8df;direction:ltr;display:block;text-align:right;overflow-wrap:anywhere}
+.empty{display:none;text-align:center;color:#bdcce0;padding:30px}
+footer{text-align:center;color:#94a8c4;padding:25px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🤝 میزکار رفیق</h1>
+  <p>دسترسی سریع به سایت‌های کاربردی ایران</p>
+</header>
+
+<main>
+  <input id="search" class="search" type="search"
+    placeholder="نام سایت یا خدمت موردنظر را جست‌وجو کن...">
+
+  <div class="filters" id="filters">
+    <button class="active" data-filter="all">همه سایت‌ها</button>
+    <button data-filter="government">دولتی و اداری</button>
+    <button data-filter="car">خودرو</button>
+    <button data-filter="bank">بانک و بیمه</button>
+    <button data-filter="post">پست و حمل‌ونقل</button>
+    <button data-filter="education">آموزش</button>
+    <button data-filter="shopping">خرید و فروش</button>
+    <button data-filter="map">نقشه و سفر</button>
+    <button data-filter="news">خبر و اطلاعات</button>
+  </div>
+
+  <h2>سایت‌های قابل دسترس</h2>
+  <section class="grid" id="sites">
+
+    <a class="site" data-cat="government" data-name="پنجره ملی خدمات دولت دولت من" href="https://my.gov.ir/" target="_blank" rel="noopener"><strong>🇮🇷 پنجره ملی خدمات دولت</strong><small>my.gov.ir</small></a>
+    <a class="site" data-cat="government" data-name="عدل ایران قضایی" href="https://adliran.ir/" target="_blank" rel="noopener"><strong>⚖️ عدل ایران</strong><small>adliran.ir</small></a>
+    <a class="site" data-cat="government" data-name="سامانه ثنا" href="https://sana.adliran.ir/" target="_blank" rel="noopener"><strong>📄 سامانه ثنا</strong><small>sana.adliran.ir</small></a>
+    <a class="site" data-cat="government" data-name="سازمان امور مالیاتی مالیات" href="https://my.tax.gov.ir/" target="_blank" rel="noopener"><strong>🧾 خدمات مالیاتی</strong><small>my.tax.gov.ir</small></a>
+    <a class="site" data-cat="government" data-name="تامین اجتماعی" href="https://tamin.ir/" target="_blank" rel="noopener"><strong>🏥 تأمین اجتماعی</strong><small>tamin.ir</small></a>
+    <a class="site" data-cat="government" data-name="ثبت احوال" href="https://www.sabteahval.ir/" target="_blank" rel="noopener"><strong>🪪 ثبت احوال</strong><small>sabteahval.ir</small></a>
+    <a class="site" data-cat="government" data-name="ثبت اسناد املاک" href="https://ssaa.ir/" target="_blank" rel="noopener"><strong>🏢 ثبت اسناد و املاک</strong><small>ssaa.ir</small></a>
+    <a class="site" data-cat="government" data-name="سامانه جامع تجارت" href="https://www.ntsw.ir/" target="_blank" rel="noopener"><strong>📦 سامانه جامع تجارت</strong><small>ntsw.ir</small></a>
+
+    <a class="site" data-cat="car" data-name="ایران خودرو" href="https://ikco.ir/" target="_blank" rel="noopener"><strong>🚗 ایران‌خودرو</strong><small>ikco.ir</small></a>
+    <a class="site" data-cat="car" data-name="فروش ایران خودرو ثبت نام" href="https://esale.ikco.ir/" target="_blank" rel="noopener"><strong>📝 فروش ایران‌خودرو</strong><small>esale.ikco.ir</small></a>
+    <a class="site" data-cat="car" data-name="سایپا" href="https://saipacorp.com/" target="_blank" rel="noopener"><strong>🚙 گروه سایپا</strong><small>saipacorp.com</small></a>
+    <a class="site" data-cat="car" data-name="فروش سایپا ثبت نام" href="https://saipa.iranecar.com/" target="_blank" rel="noopener"><strong>📝 فروش سایپا</strong><small>saipa.iranecar.com</small></a>
+    <a class="site" data-cat="car" data-name="بهمن موتور" href="https://bahman.ir/" target="_blank" rel="noopener"><strong>🚘 بهمن موتور</strong><small>bahman.ir</small></a>
+    <a class="site" data-cat="car" data-name="فروش بهمن موتور" href="https://sale.bahman.ir/" target="_blank" rel="noopener"><strong>📝 فروش بهمن موتور</strong><small>sale.bahman.ir</small></a>
+    <a class="site" data-cat="car" data-name="مدیران خودرو" href="https://mvmco.ir/" target="_blank" rel="noopener"><strong>🚗 مدیران خودرو</strong><small>mvmco.ir</small></a>
+    <a class="site" data-cat="car" data-name="کرمان موتور" href="https://kermanmotor.com/" target="_blank" rel="noopener"><strong>🚙 کرمان موتور</strong><small>kermanmotor.com</small></a>
+
+    <a class="site" data-cat="bank" data-name="بانک مرکزی" href="https://www.cbi.ir/" target="_blank" rel="noopener"><strong>🏦 بانک مرکزی</strong><small>cbi.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک ملی" href="https://bank-melli.ir/" target="_blank" rel="noopener"><strong>🏦 بانک ملی</strong><small>bank-melli.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک ملت" href="https://www.bankmellat.ir/" target="_blank" rel="noopener"><strong>🏦 بانک ملت</strong><small>bankmellat.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک تجارت" href="https://www.tejaratbank.ir/" target="_blank" rel="noopener"><strong>🏦 بانک تجارت</strong><small>tejaratbank.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک صادرات" href="https://www.bsi.ir/" target="_blank" rel="noopener"><strong>🏦 بانک صادرات</strong><small>bsi.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک سپه" href="https://www.banksepah.ir/" target="_blank" rel="noopener"><strong>🏦 بانک سپه</strong><small>banksepah.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک سامان" href="https://www.sb24.ir/" target="_blank" rel="noopener"><strong>🏦 بانک سامان</strong><small>sb24.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بانک پاسارگاد" href="https://www.bpi.ir/" target="_blank" rel="noopener"><strong>🏦 بانک پاسارگاد</strong><small>bpi.ir</small></a>
+    <a class="site" data-cat="bank" data-name="بیمه مرکزی" href="https://www.centinsur.ir/" target="_blank" rel="noopener"><strong>🛡️ بیمه مرکزی</strong><small>centinsur.ir</small></a>
+
+    <a class="site" data-cat="post" data-name="شرکت ملی پست" href="https://www.post.ir/" target="_blank" rel="noopener"><strong>📮 شرکت ملی پست</strong><small>post.ir</small></a>
+    <a class="site" data-cat="post" data-name="رهگیری مرسوله پستی" href="https://tracking.post.ir/" target="_blank" rel="noopener"><strong>📦 رهگیری مرسوله</strong><small>tracking.post.ir</small></a>
+    <a class="site" data-cat="post" data-name="راهور 120" href="https://rahvar120.ir/" target="_blank" rel="noopener"><strong>🚦 راهور ۱۲۰</strong><small>rahvar120.ir</small></a>
+    <a class="site" data-cat="post" data-name="سازمان راهداری" href="https://www.rmto.ir/" target="_blank" rel="noopener"><strong>🛣️ سازمان راهداری</strong><small>rmto.ir</small></a>
+
+    <a class="site" data-cat="education" data-name="وزارت آموزش و پرورش" href="https://medu.gov.ir/" target="_blank" rel="noopener"><strong>🏫 آموزش و پرورش</strong><small>medu.gov.ir</small></a>
+    <a class="site" data-cat="education" data-name="پنجره خدمات آموزش و پرورش" href="https://my.medu.ir/" target="_blank" rel="noopener"><strong>📚 خدمات دانش‌آموزی</strong><small>my.medu.ir</small></a>
+    <a class="site" data-cat="education" data-name="سازمان سنجش" href="https://www.sanjesh.org/" target="_blank" rel="noopener"><strong>🎓 سازمان سنجش</strong><small>sanjesh.org</small></a>
+    <a class="site" data-cat="education" data-name="دانشگاه آزاد آزمون" href="https://azmoon.org/" target="_blank" rel="noopener"><strong>🎓 آزمون دانشگاه آزاد</strong><small>azmoon.org</small></a>
+
+    <a class="site" data-cat="shopping" data-name="دیجی کالا خرید" href="https://www.digikala.com/" target="_blank" rel="noopener"><strong>🛍️ دیجی‌کالا</strong><small>digikala.com</small></a>
+    <a class="site" data-cat="shopping" data-name="ترب مقایسه قیمت" href="https://torob.com/" target="_blank" rel="noopener"><strong>💰 ترب</strong><small>torob.com</small></a>
+    <a class="site" data-cat="shopping" data-name="دیوار خرید فروش آگهی" href="https://divar.ir/" target="_blank" rel="noopener"><strong>📣 دیوار</strong><small>divar.ir</small></a>
+    <a class="site" data-cat="shopping" data-name="شیپور" href="https://www.sheypoor.com/" target="_blank" rel="noopener"><strong>📢 شیپور</strong><small>sheypoor.com</small></a>
+
+    <a class="site" data-cat="map" data-name="نشان نقشه مسیریابی" href="https://neshan.org/" target="_blank" rel="noopener"><strong>🗺️ نشان</strong><small>neshan.org</small></a>
+    <a class="site" data-cat="map" data-name="بلد نقشه" href="https://balad.ir/" target="_blank" rel="noopener"><strong>📍 بلد</strong><small>balad.ir</small></a>
+    <a class="site" data-cat="map" data-name="گوگل مپ" href="https://maps.google.com/" target="_blank" rel="noopener"><strong>🌍 گوگل‌مپ</strong><small>maps.google.com</small></a>
+
+    <a class="site" data-cat="news" data-name="ایرنا خبرگزاری" href="https://www.irna.ir/" target="_blank" rel="noopener"><strong>📰 خبرگزاری ایرنا</strong><small>irna.ir</small></a>
+    <a class="site" data-cat="news" data-name="ایسنا خبرگزاری" href="https://www.isna.ir/" target="_blank" rel="noopener"><strong>📰 خبرگزاری ایسنا</strong><small>isna.ir</small></a>
+    <a class="site" data-cat="news" data-name="مهر خبرگزاری" href="https://www.mehrnews.com/" target="_blank" rel="noopener"><strong>📰 خبرگزاری مهر</strong><small>mehrnews.com</small></a>
+    <a class="site" data-cat="news" data-name="ورزش سه" href="https://www.varzesh3.com/" target="_blank" rel="noopener"><strong>⚽ ورزش سه</strong><small>varzesh3.com</small></a>
+
+  </section>
+  <div class="empty" id="empty">سایتی با این نام پیدا نشد.</div>
+</main>
+
+<footer>میزکار رفیق | دسترسی سریع، ساده و یک‌جا</footer>
+
+<script>
+const search = document.getElementById("search");
+const cards = [...document.querySelectorAll(".site")];
+const buttons = [...document.querySelectorAll(".filters button")];
+const empty = document.getElementById("empty");
+let category = "all";
+
+function updateSites(){
+  const term = search.value.trim().toLowerCase();
+  let shown = 0;
+
+  cards.forEach(card => {
+    const matchesCategory = category === "all" || card.dataset.cat === category;
+    const matchesText = (card.dataset.name + " " + card.innerText).toLowerCase().includes(term);
+    const visible = matchesCategory && matchesText;
+    card.style.display = visible ? "block" : "none";
+    if(visible) shown++;
+  });
+
+  empty.style.display = shown ? "none" : "block";
+}
+
+search.addEventListener("input", updateSites);
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    buttons.forEach(item => item.classList.remove("active"));
+    button.classList.add("active");
+    category = button.dataset.filter;
+    updateSites();
+  });
+});
+</script>
+</body>
+</html>
